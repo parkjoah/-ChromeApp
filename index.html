@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
     <title>Momentum App</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="box"></div>
     <form id="login-form" class="hidden">
-        <input required maxlength="15" type="text" placeholder="what is your name?">
+      <h1>Hello ! what is your name?</h1>
+      <div>
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="what is your name?"
+        />
         <button>Log In</button>
+      </div>
     </form>
     <h2 id="clock">00:00:00</h2>
     <h1 id="greeting" class="hidden"></h1>
     <form id="todo-form">
-        <input required type="text" placeholder="write a TODO and Press Enter"/>
+      <input required type="text" placeholder="write a TODO and Press Enter" />
     </form>
     <ul id="todo-list"></ul>
     <div id="quote">
-        <span></span>
-        <span></span>
+      <span></span>
+      <span></span>
     </div>
     <div id="weather">
-        <span></span>
-        <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <script src="app.js"></script> <!-- greeting -->
+    <script src="app.js"></script>
+    <!-- greeting -->
     <script src="clock.js"></script>
     <script src="quotes.js"></script>
     <script src="background.js"></script>
     <script src="todo.js"></script>
     <script src="weather.js"></script>
-</body>
+  </body>
 </html>
