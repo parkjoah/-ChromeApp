@@ -34,7 +34,7 @@ body {
 }
 #login-form {
   position: absolute;
-  top: 30%;
+  top: 33%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -43,8 +43,16 @@ body {
   font-size: 30px;
   font-weight: bold;
 }
-#login-form input {
+#login-form div {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+#login-form input,
+button {
   border: none;
   background-color: transparent;
   border-bottom: 2px solid black;
 }
+
+/* login */
