@@ -13,8 +13,21 @@ function onLoginSubmit(event) {
   paintGreetings(username);
 }
 
+function greetingByTime() {
+  const date = new Date();
+  const hours = date.getHours();
+
+  return hours > 0 && hours < 6
+    ? "Hello"
+    : hours < 12
+    ? "Good morning"
+    : hours < 18
+    ? " Good afternoon"
+    : "Good night";
+}
+
 function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
+  greeting.innerText = `${greetingByTime()} ${username}님!`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
   clock.classList.remove(HIDDEN_CLASSNAME);
   quote.classList.remove(HIDDEN_CLASSNAME);

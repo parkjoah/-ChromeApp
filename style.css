@@ -21,17 +21,6 @@ body {
   flex-direction: column;
 }
 
-.box {
-  background-color: #fff;
-  width: 50%;
-  height: 50%;
-  opacity: 0.2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(50%, 50%);
-  border-radius: 22px;
-}
 #login-form {
   position: absolute;
   top: 33%;
@@ -56,3 +45,37 @@ button {
 }
 
 /* login */
+#clock {
+  display: flex;
+  margin-top: 30px;
+  font-size: 80px;
+  justify-content: center;
+  font-weight: bold;
+}
+#greeting {
+  display: flex;
+  margin-top: 220px;
+  font-size: 25px;
+  justify-content: center;
+}
+#quote {
+  position: absolute;
+  bottom: 30px;
+  color: white;
+  justify-content: center;
+}
+#quote > span {
+  display: flex;
+  font-style: italic;
+  justify-content: center;
+}
+#quote > span:last-child {
+  margin-top: 5px;
+  font-size: small;
+}
+#weather {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+}
