@@ -13,6 +13,13 @@ function onLoginSubmit(event) {
   paintGreetings(username);
 }
 
+function paintGreetings(username) {
+  greeting.innerText = `${greetingByTime()} ${username}님!`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+  clock.classList.remove(HIDDEN_CLASSNAME);
+  quote.classList.remove(HIDDEN_CLASSNAME);
+  weather.classList.remove(HIDDEN_CLASSNAME);
+}
 function greetingByTime() {
   const date = new Date();
   const hours = date.getHours();
@@ -24,14 +31,6 @@ function greetingByTime() {
     : hours < 18
     ? " Good afternoon"
     : "Good night";
-}
-
-function paintGreetings(username) {
-  greeting.innerText = `${greetingByTime()} ${username}님!`;
-  greeting.classList.remove(HIDDEN_CLASSNAME);
-  clock.classList.remove(HIDDEN_CLASSNAME);
-  quote.classList.remove(HIDDEN_CLASSNAME);
-  weather.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);

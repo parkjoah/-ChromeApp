@@ -19,6 +19,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: #000000;
 }
 
 #login-form {
@@ -48,21 +49,25 @@ button {
 #clock {
   display: flex;
   margin-top: 30px;
-  font-size: 80px;
+  font-size: 100px;
   justify-content: center;
+  font-family: fantasy;
   font-weight: bold;
 }
 #greeting {
   display: flex;
   margin-top: 220px;
   font-size: 25px;
+  font-weight: bold;
   justify-content: center;
+  font-family: fantasy;
 }
 #quote {
   position: absolute;
   bottom: 30px;
   color: white;
   justify-content: center;
+  font-family: fantasy;
 }
 #quote > span {
   display: flex;
@@ -75,6 +80,7 @@ button {
 }
 #weather {
   position: absolute;
+  font-family: fantasy;
   top: 20px;
   right: 20px;
   color: #fff;
