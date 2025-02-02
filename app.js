@@ -24,7 +24,7 @@ function greetingByTime() {
   const date = new Date();
   const hours = date.getHours();
 
-  return hours > 0 && hours < 6
+  return hours >= 0 && hours < 6
     ? "Hello"
     : hours < 12
     ? "Good morning"

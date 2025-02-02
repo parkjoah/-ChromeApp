@@ -66,6 +66,34 @@ body {
 #container button {
   height: 30px;
 }
+
+/* D-day popup */
+#dDayPop {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#dDayPop input {
+  width: 150px;
+}
+#dDayBlock {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+}
 /* login */
 #clock {
   display: flex;

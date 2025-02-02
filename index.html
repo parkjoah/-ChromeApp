@@ -32,15 +32,25 @@
     <div id="palette">
       <button>설정</button>
       <div id="container">
-        <button></button><button></button><button></button><button></button
-        ><button></button>
+        <button>font</button><button>textcolor</button><button>bgImg</button
+        ><button>디데이</button>
       </div>
     </div>
     <!-- dday -->
-    <form id="dday-form">
-      <input type="text" />
-    </form>
-    <div id="dDayBlock"></div>
+    <div id="dDayPop" class="hidden">
+      <form id="dday-form">
+        <label for="dDayInput">D-Day 설정</label><br />
+        <input
+          id="dDayInput"
+          type="text"
+          placeholder="D-Day 이름을 입력하세요"
+        /><br />
+        <input id="dDayDate" type="date" /><br />
+        <button id="dDaydelBtn" type="button">삭제</button>
+        <button id="dDaySubmit" type="submit">저장</button>
+      </form>
+    </div>
+    <div id="dDayBlock" class="hidden"><span></span></div>
 
     <script src="app.js"></script>
     <script src="clock.js"></script>
