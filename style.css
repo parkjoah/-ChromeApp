@@ -63,6 +63,9 @@ body {
   flex-direction: column;
   gap: 60px;
 }
+#container button {
+  height: 30px;
+}
 /* login */
 #clock {
   display: flex;
