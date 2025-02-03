@@ -8,19 +8,16 @@
     <title>Momentum App</title>
   </head>
   <body>
+    <!-- login, greeting -->
     <form id="login-form" class="hidden">
       <h1>Hello ! what is your name?</h1>
       <div>
         <input required maxlength="15" type="text" />
-        <!-- <button>→</button> -->
       </div>
     </form>
     <h1 id="greeting" class="hidden"></h1>
+    <!-- quote, weather, clock 기본 세팅 -->
     <h2 id="clock" class="hidden">00:00:00</h2>
-    <form id="todo-form" class="hidden">
-      <input required type="text" placeholder="write a TODO and Press Enter" />
-    </form>
-    <ul id="todo-list" class="hidden"></ul>
     <div id="quote" class="hidden">
       <span></span>
       <span></span>
@@ -29,11 +26,23 @@
       <span></span> / <span></span><br />
       <span></span>
     </div>
+    <!-- todoForm -->
+    <div id="toDoPopup" class="hidden">
+      <form id="todo-form">
+        <input
+          required
+          type="text"
+          placeholder="write a TODO and Press Enter"
+        />
+      </form>
+    </div>
+    <ul id="todo-list" class="hidden"></ul>
+    <!-- palette -->
     <div id="palette">
       <button>설정</button>
       <div id="container">
         <button>font</button><button>textcolor</button><button>bgImg</button
-        ><button>디데이</button>
+        ><button>todo</button><button>디데이</button>
       </div>
     </div>
     <!-- dday -->
@@ -50,8 +59,10 @@
         <button id="dDaySubmit" type="submit">저장</button>
       </form>
     </div>
-    <div id="dDayBlock" class="hidden"><span></span></div>
-
+    <div id="dDayBlock" class="hidden">
+      <span id="dDateSpan"></span><br /><span id="dDaySpan"></span>
+    </div>
+    <!-- script -->
     <script src="app.js"></script>
     <script src="clock.js"></script>
     <script src="quotes.js"></script>
