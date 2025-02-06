@@ -6,6 +6,9 @@ const dDayPop = document.getElementById("dDayPop");
 const dDayDate = dDayForm.querySelector("#dDayDate");
 const dDayDelBtn = dDayForm.querySelector("#dDaydelBtn");
 
+const NEWDDAY_KEY = "newdDay";
+const TARGETDATE = "targetDate";
+
 const dDaySpan = dDayBlock.querySelector("#dDaySpan");
 const dDateSpan = dDayBlock.querySelector("#dDateSpan");
 function paintdDay(newdDay, targetDate) {
@@ -18,11 +21,12 @@ function paintdDay(newdDay, targetDate) {
 
 function dDaySubmit(event) {
   event.preventDefault();
-  // console.log(dDayInput.value);
+
   const newdDay = dDayInput.value;
   const newdDate = dDayDate.value;
   const targetDate = new Date(newdDate); //형식 맞추기...
-  // console.log(dDayDate.value);
+  localStorage.setItem(NEWDDAY_KEY, newdDay);
+  localStorage.setItem(TARGETDATE, targetDate);
   dDayDate.value == ""
     ? alert("날짜를 설정해주세요")
     : dDayInput.value == ""
@@ -56,10 +60,20 @@ function dDaySpanShow() {
     : dDayBlock.classList.add(HIDDEN_CLASSNAME);
 }
 
-function countDday(newdDate) {
+function countDday(targetDate) {
   const todayDate = new Date();
-  const dayCount = Math.ceil((newdDate - todayDate) / (1000 * 60 * 60 * 24));
+
+  const dayCount = Math.ceil(
+    (targetDate.getTime() - todayDate) / (1000 * 60 * 60 * 24)
+  );
   return dayCount;
+}
+
+const savedDDay = localStorage.getItem(NEWDDAY_KEY);
+const savedTargetDate = localStorage.getItem(TARGETDATE);
+
+if ((savedDDay !== null) & (savedTargetDate !== null)) {
+  paintdDay(savedDDay, new Date(savedTargetDate));
 }
 
 // 헷갈리니까 해야 되는 거 메모//
