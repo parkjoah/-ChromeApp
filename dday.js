@@ -44,8 +44,10 @@ function popDday() {
 
 function dDayDel() {
   dDaySpan.innerText = "";
-  // console.log(dDaySpan.innerText);
+  // console.log(dDaySpan.innerText);whd
   dDaySpanShow();
+  localStorage.removeItem(NEWDDAY_KEY);
+  localStorage.removeItem(HIDDEN_CLASSNAME);
 }
 
 dDayForm.addEventListener("submit", dDaySubmit);
