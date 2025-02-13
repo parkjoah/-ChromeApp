@@ -3,7 +3,7 @@ const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 const todoListContainer = document.getElementById("todoListContainer");
 
-const toDoBtn = document.querySelector("#container :nth-child(4)");
+const toDoBtn = document.querySelector("#container :nth-child(3)");
 // console.log(toDoBtn);
 const toDoPopup = document.querySelector("#toDoPopup");
 function toDoPop() {
@@ -36,7 +36,7 @@ function paintTodo(newTodo) {
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const btn = document.createElement("button");
-  btn.innerText = "❌";
+  btn.innerText = "✔️";
   btn.addEventListener("click", deleteToDo);
   li.appendChild(span);
   li.appendChild(btn);
@@ -65,11 +65,3 @@ if (savedToDos !== null) {
   toDos = parsedToDo;
   parsedToDo.forEach(paintTodo);
 }
-
-toDoList.childElementCount !== 0
-  ? todoListContainer.classList.remove(HIDDEN_CLASSNAME)
-  : todoListContainer.classList.add(HIDDEN_CLASSNAME);
-
-// todo리스트 내용 있을때만 표시되도록 -ok
-// todo리스트도 팝업창으로 뜨게 하게 - ok
-//

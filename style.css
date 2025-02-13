@@ -53,19 +53,18 @@ body {
   display: flex;
   flex-direction: column;
 }
+#palette button {
+  height: 30px;
+  width: 67px;
+}
 
 #container {
   padding-top: 60px;
   width: 100%;
   height: 400px;
-  margin-top: 30px;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   gap: 60px;
-}
-#container button {
-  height: 30px;
 }
 
 /* D-day popup */
@@ -93,7 +92,12 @@ body {
   transform: translateX(-50%);
   text-align: center;
   width: 100px;
-  background-color: #fff;
+}
+#dDateSpan {
+  font-size: 18px;
+}
+#dDaySpan {
+  font-size: 23px;
 }
 
 /* todo */
@@ -107,6 +111,36 @@ body {
   background-color: #fff;
   align-content: center;
   text-align: center;
+}
+
+#todoListContainer {
+  position: absolute;
+  bottom: 300px;
+  right: 70px;
+  background-color: #ffffff66;
+  width: 200px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 10px 3px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+#todoListContainer li:first-child {
+  border-top: #000 1px solid;
+}
+#todoListContainer li {
+  border-top: #b5b5b5 1px solid;
+  font-size: 17px;
+  padding-top: 5px;
+  font-weight: normal;
+}
+#todoListContainer li span {
+  padding-right: 5px;
+}
+#todoListContainer li button {
+  background-color: transparent;
+  border: none;
 }
 /* login */
 #clock {

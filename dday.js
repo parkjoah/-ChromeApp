@@ -16,7 +16,6 @@ function paintdDay(newdDay, targetDate) {
   dDaySpan.innerText = newdDay;
   dDateSpan.innerText = "D - " + countDday(targetDate);
   dDaySpanShow();
-  popDday();
 }
 
 function dDaySubmit(event) {
@@ -44,7 +43,6 @@ function popDday() {
 
 function dDayDel() {
   dDaySpan.innerText = "";
-  // console.log(dDaySpan.innerText);whd
   dDaySpanShow();
   localStorage.removeItem(NEWDDAY_KEY);
   localStorage.removeItem(HIDDEN_CLASSNAME);
