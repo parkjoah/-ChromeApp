@@ -54,17 +54,20 @@ body {
   flex-direction: column;
 }
 #palette button {
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 12px;
   height: 30px;
   width: 67px;
 }
 
 #container {
-  padding-top: 60px;
+  padding-top: 30px;
   width: 100%;
   height: 400px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 30px;
 }
 
 /* D-day popup */
@@ -180,5 +183,5 @@ body {
   font-family: fantasy;
   top: 20px;
   left: 20px;
-  color: #fff;
+  color: #000;
 }
