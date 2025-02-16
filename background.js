@@ -1,6 +1,6 @@
 const images = ["CA01.jpg", "CA02.jpg", "CA03.jpg", "CA04.jpg", "CA05.jpg"];
 
-const imgChangeBtn = document.querySelector("#container button:nth-child(2)");
+const imgChangeBtn = document.querySelector("#container button:first-child");
 
 const bgImage = document.createElement("img");
 bgImage.src = `img/CA05.jpg`;

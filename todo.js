@@ -3,13 +3,14 @@ const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 const todoListContainer = document.getElementById("todoListContainer");
 
-const toDoBtn = document.querySelector("#container :nth-child(3)");
+const toDoBtn = document.querySelector("#container :nth-child(2)");
 // console.log(toDoBtn);
 const toDoPopup = document.querySelector("#toDoPopup");
 function toDoPop() {
   toDoPopup.className == ""
     ? toDoPopup.classList.add(HIDDEN_CLASSNAME)
     : toDoPopup.classList.remove(HIDDEN_CLASSNAME);
+  dDayPop.className == "" ? dDayPop.classList.add(HIDDEN_CLASSNAME) : null;
 }
 
 toDoBtn.addEventListener("click", toDoPop);
