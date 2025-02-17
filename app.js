@@ -18,6 +18,8 @@ function paintGreetings(username) {
   greeting.classList.remove(HIDDEN_CLASSNAME);
   clock.classList.remove(HIDDEN_CLASSNAME);
   quote.classList.remove(HIDDEN_CLASSNAME);
+  palette.classList.remove(HIDDEN_CLASSNAME);
+  todoListContainer.classList.remove(HIDDEN_CLASSNAME);
   weather.classList.remove(HIDDEN_CLASSNAME);
 }
 function greetingByTime() {
