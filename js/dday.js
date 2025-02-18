@@ -44,10 +44,12 @@ function popDday() {
 }
 
 function dDayDel() {
-  dDaySpan.innerText = "";
-  dDaySpanShow();
-  localStorage.removeItem(NEWDDAY_KEY);
-  localStorage.removeItem(HIDDEN_CLASSNAME);
+  if (window.confirm("디데이를 삭제하겠습니까 ?")) {
+    dDaySpan.innerText = "";
+    dDaySpanShow();
+    localStorage.removeItem(NEWDDAY_KEY);
+    localStorage.removeItem(HIDDEN_CLASSNAME);
+  }
 }
 
 dDayForm.addEventListener("submit", dDaySubmit);
